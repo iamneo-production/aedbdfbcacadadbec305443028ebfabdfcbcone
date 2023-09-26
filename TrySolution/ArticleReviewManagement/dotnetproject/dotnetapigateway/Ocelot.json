@@ -1,0 +1,74 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/Article",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7214
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Article",
+            "UpstreamHttpMethod": ["POST", "GET"],
+            "DownstreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownstreamPathTemplate": "/api/Article/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7214
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Article/{id}",
+            "UpstreamHttpMethod": ["DELETE", "GET"],
+            "DownstreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownstreamPathTemplate": "/api/Review",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 6200
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Review",
+            "UpstreamHttpMethod": ["POST", "GET"],
+            "DownstreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownstreamPathTemplate": "/api/Review/ReviewerNames",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 6200
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Review/ReviewerNames",
+            "UpstreamHttpMethod": ["GET"],
+            "DownstreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownstreamPathTemplate": "/api/Review/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 6200
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Review/{id}",
+            "UpstreamHttpMethod": ["DELETE"],
+            "DownstreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        }
+    ]
+}
